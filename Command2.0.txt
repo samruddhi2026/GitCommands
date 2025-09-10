@@ -1,0 +1,85 @@
+| `git init`                | Initialize a new Git repository                | `git init`             |
+| `git clone <repo_url>`    | Clone an existing repository                   | `git clone https://github.com/user/repo.git` |
+| `git status`              | Check the current status of files              | `git status`                                 |
+| `git add <file>`          | Add a specific file to staging                 | `git add index.html`                         |
+| `git add .`               | Add **all** changes to staging                 | `git add .`                                  |
+| `git commit -m "message"` | Commit staged changes with a message           | `git commit -m "Added login feature"`        |
+| `git log`                 | Show commit history                            | `git log`                                    |
+| `git show <commit_id>`    | Show details of a specific commit              | `git show a1b2c3`                            |
+| `git diff`                | Show changes between working directory and staging area | `git`                               |
+| `git diff --staged`       | Show changes between staging and last commit            | `git diff`                          |
+
+
+
+| Command                    | Description                                  | Example                      |
+| -------------------------- | -------------------------------------------- | ---------------------------- |
+| `git branch`               | List all branches                            | `git branch`                 |
+| `git branch <branch_name>` | Create a new branch                          | `git branch feature-login`   |
+| `git checkout <branch>`    | Switch to a branch                           | `git checkout feature-login` |
+| `git checkout -b <branch>` | Create **and** switch to a new branch        | `git checkout -b bugfix-ui`  |
+| `git merge <branch>`       | Merge another branch into the current branch | `git merge feature-login`    |
+| `git branch -d <branch>`   | Delete a branch                              | `git branch -d old-feature`  |
+| `git switch <branch>`      | Switch branches (modern alternative)         | `git switch main`            |
+| `git switch -c <branch>`   | Create and switch to a new branch            | `git switch -c testing`      |
+
+
+
+
+| Command                       | Description                             |          Example                     |
+| ------------------------------| ----------------------------------------| -------------------------------------|
+| `git remote -v`               | View remote repository URLs             | `git remote `                        |
+| `git remote add origin <url>` | Connect local repo to remote            | `git remote add origin`              |
+| `git push origin <branch>`    | Push changes to remote                  | `git push origin main`               |
+| `git push -u origin <branch>` | Push and set upstream branch            | `git push -u orig dev`               |
+| `git pull origin <branch>`    | Pull latest changes from remote         | `git pull origin main`               |
+| `git fetch origin`            | Download latest updates without merging | `git fetch origin`                   |
+| `git remote remove origin`    | Remove the remote repository            | `git remote remove origin`           |
+
+
+
+
+
+| Command                       | Description                                       | Example                       |
+| ----------------------------- | ------------------------------------------------- | ----------------------------- |
+| `git restore <file>`          | Discard local changes                             | `git restore index.html`      |
+| `git restore --staged <file>` | Unstage a file                                    | `git restore --staged app.py` |
+| `git reset --soft <commit>`   | Move HEAD to a commit but keep changes staged     | `git reset --soft HEAD~1`     |
+| `git reset --mixed <commit>`  | Move HEAD to a commit but keep changes unstaged   | `git reset --mixed HEAD~1`    |
+| `git reset --hard <commit>`   | Reset everything to a previous commit             | `git reset --hard a1b2c3`     |
+| `git revert <commit>`         | Create a new commit to undo changes from a commit | `git revert a1b2c3`           |
+
+
+
+
+
+| Command           | Description                              | Example           |
+| ----------------- | ---------------------------------------- | ----------------- |
+| `git stash`       | Save uncommitted changes temporarily     | `git stash`       |
+| `git stash list`  | Show list of stashes                     | `git stash list`  |
+| `git stash pop`   | Apply the latest stash and remove it     | `git stash pop`   |
+| `git stash apply` | Apply the latest stash but keep it saved | `git stash apply` |
+| `git stash drop`  | Delete the latest stash                  | `git stash drop`  |
+| `git stash clear` | Delete all stashes                       | `git stash clear` |
+
+
+
+| Command                          | Description                 | Example                              |
+| -------------------------------- | --------------------------- | ------------------------------------ |
+| `git tag`                        | List all tags               | `git tag`                            |
+| `git tag <tag_name>`             | Create a new tag            | `git tag v1.0`                       |
+| `git tag -a <tag_name> -m "msg"` | Create an **annotated** tag | `git tag -a v1.0 -m "First release"` |
+| `git show <tag>`                 | Show details of a tag       | `git show v1.0`                      |
+| `git push origin <tag>`          | Push a tag to remote        | `git push origin v1.0`               |
+| `git push origin --tags`         | Push **all** tags to remote | `git push origin --tags`             |
+
+Useful Shortcuts 
+
+| Command                     | Description                                 | Example                                   |
+| --------------------------- | ------------------------------------------- | ------------------------------------------|
+| `git commit --amend`        | Modify the last commit message              | `git commit --amend -m`                   | 
+| `git log --oneline`         | View commit history in short format         | `git log --oneline`                       |
+| `git log --graph --oneline` | View commit history visually                | `git log --graph --oneline`               |
+| `git reflog`                | Show all HEAD history (useful for recovery) | `git reflog`                              |
+| `git blame <file>`          | Show who changed each line                  | `git blame app.py`                        |
+| `git grep <keyword>`        | Search keyword inside repo files            | `git grep "password"`                     |
+
